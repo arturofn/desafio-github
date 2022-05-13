@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+.logoPrincipal {
+    display: inline-block;
+    width: 250px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerMenu {
+    color: white;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;   
+}
+
+#buscador {
+    width: 500px;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer {
+    color: black;
+    display: inline-block;
+    padding: 20px;
+    font-family: 'Lato', sans-serif;
+}
+
+.menuPrincipal {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.navSearchBar {
+    margin-right: 150px;
+}
+
+header {
+    background-color: #027C76;
+    padding: 30px;
+    position: sticky;
+    top: 0;
+    grid-area: header;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.padreCategorias {
+    /* padding: 20px;
+    margin-bottom: 20px;       
+    border-radius: 25px;
+    /* aplico flex */
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: space-around; */
+    
+    padding: 20px;
+    margin-bottom: 20px;          
+    border-radius: 25px;
+    /* aplico flex */
+    /* display: flex; */
+    /* justify-content: space-evenly; */
+    /* flex-wrap: wrap; */
+    /* justify-content: space-around; */
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    gap: 100px;
+    grid-area: productos1;   
+}
+
+.categorias1 {
+    grid-area: categorias1;
+}
+
+.productos1 {
+    padding: 20px;
+    margin-bottom: 20px;          
+    border-radius: 25px;
+    /* aplico flex */
+    /* display: flex; */
+    /* justify-content: space-evenly; */
+    /* flex-wrap: wrap; */
+    /* justify-content: space-around; */
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    gap: 100px;
+    grid-area: productos1;        
+}
+
+.productos {
+    border: 1px solid grey;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.categorias {
+    border: 1px solid grey;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all, 0.3s;
+}
+
+.categorias:hover {
+    transform: scale(1.1,1.1);
+}
+
+#banner {
+    grid-area: banner;
+}
+
+#bannerHome {
+    width: 100%;
+}
+
+section img {
+    width: 250px;
+}
+
+h2 {
+    padding: 20px;
+    color: gray;
+    text-align: center;    
+}
+
+.carrito {
+    width: 40px;
+}
+
+.carritoCompras {
+    display: inline-block;
+}
+
+.comprar {
+    background-image: linear-gradient(to right, #1f4037, #99f2c8);
+    border-radius: 25px;
+    color: white;
+    padding: 10px 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+}
+
+footer {
+    background-color: #eeeeee;
+    grid-area: footer;
+}
+
+#comoComprar {
+    padding: 20px;
+}
+
+#whatsapp {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+}
+
+/*media querie*/
+
+@media only screen and (max-width:599px) {
+    body {
+        display: grid;
+        grid-template-columns: 3fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: 
+        "header header"
+        "banner banner"
+        "categorias1 categorias1"
+        "productos1 productos1"
+        "footer footer";
+    }
+
+    .logoPrincipal {
+        width: 70%;
+    }
+
+    .carritoCompras {
+        width: 30%;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .padreCategorias {        
+        flex-direction: column;
+        /* column-gap: 25px;         */
+        grid-template-columns: auto;
+    }
+
+    .productos1 {
+        grid-template-columns: auto;
+    }
+
+    .navSearchBar {
+        display: none;
+    }
+
+    .menuPrincipal {
+        display: none;
+    }
+
+    .footer {
+        display: block;
+    }
+
+
+    
+}
+
+/* página "mi cuenta" */
+
+.contenedorAcceder {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 20% 20%;
+    justify-content: center;
+    gap: 100px;
+}
+
+.textoAcceder {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+
+}
+
+input {
+    border-radius: 25px;
+}
+
+/* página "contacto" */
+
+.contenedorContacto {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 20% 20%;
+    justify-content: center;
+    gap: 100px;   
+}
